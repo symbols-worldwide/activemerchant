@@ -231,7 +231,7 @@ commit 'ManageRecurringPaymentsProfileStatus', build_manage_profile_request(prof
           xml.tag! 'ManageRecurringPaymentsProfileStatusRequest', 'xmlns:n2' => EBAY_NAMESPACE do
             xml.tag! 'n2:Version', API_VERSION
             xml.tag! 'n2:ManageRecurringPaymentsProfileStatusRequestDetails' do
-              xml.tag! 'ProfileID', profile_id
+              xml.tag! 'n2:ProfileID', profile_id
               xml.tag! 'n2:Action', action
               xml.tag! 'n2:Note', options[:note] unless options[:note].blank?
             end
